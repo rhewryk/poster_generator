@@ -1,24 +1,100 @@
+var textfield;
+var output;
+
+
 function setup() {
-	var c = createCanvas(1000,1000); // width and height in pixels
-background(255)
-
-stroke(0)
-for(var i = 0;i<100; i++) {
-
-}
+	noCanvas();
+	textfield = createInput("enter your favorite icecream flavor");
+	textfiled.changed(newText);
+	textfield.input(newTyping);
+	output = select('#output');
 
 }
 
-function draw() {
-	noStroke()
-	fill(0)
-	rRadius = random(50)+50
-	ellipse(mouseX,mouseY,rRadius,rRadius)
+
+
+function newTyping() {
+	output.html(textfield.value());
+
 }
 
 
 
 
-function mousePressed() {
-	saveCanvas("sketch=07","jpg")
+function newText()  {
+	createP(textfield.value());
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// the coding train
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function setup() {
+// 	createCanvas(400,400);
+// }
+
+
+// function draw() {
+// 	background(220);
+// }
+
+
+
+
+
+// /*
+//  * @name Sine
+//  * @description Smoothly scaling size with the sin() function.
+//  */
+// let diameter;
+// let angle = 0;
+
+// function setup() {
+//   createCanvas(710, 400);
+//   diameter = height - 10;
+//   noStroke();
+//   fill(255, 204, 0);
+// }
+
+// function draw() {
+//   background(0);
+
+//   let d1 = 10 + (sin(angle) * diameter) / 2 + diameter / 2;
+//   let d2 = 10 + (sin(angle + PI / 2) * diameter) / 2 + diameter / 2;
+//   let d3 = 10 + (sin(angle + PI) * diameter) / 2 + diameter / 2;
+
+//   ellipse(0, height / 2, d1, d1);
+//   ellipse(width / 2, height / 2, d2, d2);
+//   ellipse(width, height / 2, d3, d3);
+
+//   angle += 0.02;
+// }
