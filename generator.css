@@ -6,6 +6,34 @@
 }
 
 
+#COLOR {
+	border-radius: 10px;
+	outline-color: black;
+	text-decoration: none;
+	border-style: solid;
+	width: 100%;
+	transform: scale(1.1);
+}
+
+
+#style {
+	border-radius: 10px;
+	outline-color: black;
+	text-decoration: none;
+	border-style: solid;
+	width: 100%;
+	transform: scale(1.1);
+}
+
+#input_text {
+	text-decoration: none;
+	border-width: thin;
+	width: 100%;
+	transform: scale(1.1);
+	background-color: #e9e9ed;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
 
 
 	#container {
