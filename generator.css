@@ -1,8 +1,8 @@
 #defaultCanvas0 {
 	position: relative;
-	top: 3em;
+	top: 60%;
 	left: 45%;
-	transform: translate(-50%, -50%) scale(0.9);
+	transform: translate(-50%) scale(0.9);
 }
 
 
@@ -10,6 +10,9 @@
 
 	#container {
 		max-width: 1300px;
+/*		min-width: 375px;*/
+		max-height: 1100px;
+/*		min-height: 660px;*/
 		margin: 20px auto;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
