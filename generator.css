@@ -1,3 +1,31 @@
-.text {
-	position: absolute;
+#defaultCanvas0 {
+	position: relative;
+	top: 3em;
+	left: 45%;
+	transform: translate(-50%, -50%) scale(0.9);
 }
+
+
+
+
+	#container {
+		max-width: 1300px;
+		margin: 20px auto;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 21px;
+		/*padding-top: 10px;*/
+
+/*		temoprary for development*/
+
+		/*border-left: 1px solid black;
+		border-right: 1px solid black;
+		min-height: 200px;*/
+	}
+
+		.cols-2 { grid-column:span 2; }
+		.cols-3 { grid-column:span 3; }
+		.cols-4 { grid-column:span 4; }
+		.cols-6 { grid-column:span 6; }
+		.cols-8 { grid-column:span 8; }
+		.cols-12 { grid-column:span 12; }
