@@ -2,21 +2,17 @@
 
 const Y_AXIS = 1;
 const X_AXIS = 2;
-let b1, b2, c1, c2;
+let p1, p2, p3;
+let c1, c2, c3, c4, c5, c6;
+
+let text1 = "PRIMARY";
+let text2 = "COMPLEMENTARY"
+let text3 = "COLOR CODE"
+let text4 = p1
+
 
 function setup() {
   createCanvas(2400, 3600);
-
- 
-
-
-
-
-  // define colors
-  // b1 = color(255);
-  // b2 = color(0);
-  // c1 = color(204, 102, 0);
-  // c2 = color(0, 102, 153);
 
 //primary colors
   p1 = color(237, 28, 36) //red
@@ -34,31 +30,14 @@ c6 = color(242, 101, 34) //orange
 //analogous colors
 // a1 = 
 
-
-
   noLoop();
 }
 
-
-
-
-
 function draw() {
-  // // background 
-
-
                   //PRIMARY COLOR COMBINATIONS:
                      setGradient(0, 0, width / 2, height, c5, c6, X_AXIS);
                      // setGradient(0, 0, width / 2, height, p2, p3, X_AXIS);
                      // setGradient(0, 0, width / 2, height, p3, p1, X_AXIS);
-
-
-
-
-
-
-
-
   // setGradient(width / 2, 0, width / 2, height, c2, c1, X_AXIS);
   // foreground
   // setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
@@ -67,7 +46,6 @@ function draw() {
 
 function setGradient(x, y, w, h, c1, c2, axis) {
   noFill();
-
 
   if (axis === X_AXIS) {
     // left to right gradient
@@ -79,12 +57,6 @@ function setGradient(x, y, w, h, c1, c2, axis) {
     }
   }
 }
-
-$("#keep").click(function(){
-  saveCanvas("poster","jpg")
-})
-
-
 
 
 

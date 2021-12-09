@@ -35,29 +35,6 @@ p{
 }
 
 
-#keep {
-	font-family: monospace;
-	text-transform: uppercase;
-	font-weight: 400;
-	width: 260px;
-	height: 40px;
-	background-color: black;
-	color: white;
-	border-radius: 20px;
-	font-size: 15px;
-	padding: .2em;
-	border: 2px;
-	outline: #ff366f;
-}
-
-#keep:hover {
-	cursor: pointer;
-	background-color: white;
-	color: black;
-	font-size: 24px;
-	font-weight: 700;
-}
-
 
 
 #COLOR {
