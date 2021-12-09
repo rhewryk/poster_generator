@@ -1,9 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: black;
+
+}
+
+h1{
+	text-align: center;
+	font-family: input-mono, monospace;
+	font-weight: 400;
+	font-style: normal;
+				/*700, italic*/
+
+	/*font-family: alternate-gothic-condensed-a, sans-serif;
+	font-weight: 700;
+	font-style: normal;*/
+}
+
+
 #defaultCanvas0 {
 	position: relative;
-	top: 60%;
-	left: 45%;
-	transform: translate(-50%) scale(0.9);
+	padding-top: 10em;
+	top: 72%;
+	left: 72%;
+	transform: translate(-50%, -17%) scale(0.7);
 }
+
+p{
+	font-family: input-mono, monospace;
+	font-weight: 400;
+	font-style: italic;
+	padding-bottom: 1em;
+}
+
+
+#keep {
+	font-family: monospace;
+	text-transform: uppercase;
+	font-weight: 400;
+	width: 260px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-radius: 20px;
+	font-size: 15px;
+	padding: .2em;
+	border: 2px;
+	outline: #ff366f;
+}
+
+#keep:hover {
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	font-size: 24px;
+	font-weight: 700;
+}
+
 
 
 #COLOR {
@@ -11,28 +65,6 @@
 	outline-color: black;
 	text-decoration: none;
 	border-style: solid;
-	width: 100%;
-	transform: scale(1.1);
-}
-
-
-#style {
-	border-radius: 10px;
-	outline-color: black;
-	text-decoration: none;
-	border-style: solid;
-	width: 100%;
-	transform: scale(1.1);
-}
-
-#inputText {
-	text-decoration: none;
-	border-width: thin;
-	width: 100%;
-	transform: scale(1.1);
-	background-color: #e9e9ed;
-	box-sizing: border-box;
-	border-radius: 10px;
 }
 
 
