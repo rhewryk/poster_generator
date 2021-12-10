@@ -32,7 +32,7 @@ p{
 
 
 
-#COLOR {
+#COLOR, #NAME {
 	border-radius: 10px;
 	outline-color: black;
 	text-decoration: none;
