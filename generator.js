@@ -42,6 +42,10 @@ function draw() {
   // foreground
   // setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
   // setGradient(50, 190, 540, 80, c2, c1, X_AXIS); 
+
+  $(document).click(function(){
+    alert("foo!");
+  })
 }
 
 function setGradient(x, y, w, h, c1, c2, axis) {
