@@ -4,11 +4,34 @@ const Y_AXIS = 1;
 const X_AXIS = 2;
 let p1, p2, p3;
 let c1, c2, c3, c4, c5, c6;
+let s = 'complemenl2kqwjednsasmkOWI23U4RHEtary complemenl2kqwjednsasmkOWI23U4RHEtarycomplemenl2kqwjednsasmkOWI23U4RHEtary complemenl2kqwjednsasmkOWI23U4RHEtary complemenl2kqwjednsasmkOWI23U4RHEtary lemenanalogoustroikjm,,jnjebwgkjaebrggjadictet radics plillkkkekekekekekekekekekekektco mplementary';
+let textspecifications = 475
+let t=0.1
+let loopDuration = 2 * 60
+
+
+let tiles = 100
+let tileSize
+
+
+
+
+// let font;
+
+// function preload() {
+//   font=loadFont('assets/InputMono-Medium.ttf');
+// }
+
+
 
 function setup() {
-  createCanvas(200, 300);
-  textSize(120);
-  // textAlign(CENTER);
+  createCanvas(2400, 3600);
+
+  createGraphics(width, height)
+
+textSize(textspecifications)
+textLeading(textspecifications)
+
 
 
 
@@ -29,27 +52,9 @@ c6 = color(242, 101, 34) //orange
 a1 = c1 //red
 a2 = c6 //orange
 a3 = c3 //yellow
-
-a2
-a3
 a4 = c2 //green
-
-a3
-a4
 a5 = c5 //blue (lighter)
-
-a4
-a5
 a6 = c4 //violet
-
-a5
-a6
-a1
-
-a6
-a1
-a2
-
 
 //triadic 
 t1 = a4 //green
@@ -62,17 +67,19 @@ t6 = a1 //red
 
 
 //tetradic
+noStroke()
 te1 = c1, c2, c3, c4
 te2 = c1, c2, c5, c6
 te3 = c5, c6, c3, c4
 
 
-//split-complementary
-
-
-
   noLoop();
 }
+
+
+
+
+
 
 function draw() {
 
@@ -147,12 +154,12 @@ $("#COLOR").change(function(){
 
 
 // textAlign(BOTTOM);
-let margin = 20;
-let gap = 100;
-let counter = 35;
-let fill = 255;
-noFill();
-stroke(255);
+// let margin = 20;
+// let gap = 100;
+// let counter = 35;
+// let fill = 255;
+// noFill();
+// stroke(255);
 //TETRADIC COLOR COMBOS
 
   // if ($(this).val() == "19") {
@@ -178,9 +185,14 @@ function setGradient(x, y, w, h, c1, c2, axis) {
       line(i, y, i, y +h);
     }
   }
-  text(c1, 400, 100);
-  text(c2, 200, 100);
-  text(t3, 600, 100);
+
+  noStroke();
+  fill(255);
+  // textSize(120);
+  text(s, 10, 10, 200, 900);
+  // text(c1, 0, 1600);
+  // text(c2, 0, 1700);
+
 
 
 }

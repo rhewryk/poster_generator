@@ -3,6 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: black;
+	text-decoration: none;
+	border: 2px;
+	border-color: transparent;
 
 }
 
@@ -19,8 +22,12 @@ h1{
 }
 
 
-#defaultCanvas0 {
+/*#defaultCanvas0 {
+	transform: translate(100%, 25%) scale(.9);
 }
+*/
+
+
 
 p{
 	font-family: input-mono, monospace;
@@ -28,7 +35,6 @@ p{
 	font-style: italic;
 	padding-bottom: 1em;
 }
-
 
 
 
