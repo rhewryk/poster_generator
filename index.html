@@ -1,189 +1,100 @@
-<!doctype html>
+
+<!DOCTYPE html>
+
+
 <html>
-	<head>
-
-		<link rel='stylesheet' href='generator.css'>
-
-
-		<link rel="stylesheet" href="https://use.typekit.net/hcj2shw.css">
-		<link rel="stylesheet" href="https://use.typekit.net/hcj2shw.css">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-			<!-- <script class="text" src="generator.js"></script> -->
-			<script class="trial" src="trial.js"></script>
-
-</head>
-<body>
-
-<div id="container">
-<div class="top-menu">
-			<div class="cols-6">
-			</div>
-			<div class="cols-4">
-			</div>
-		</div>
-			
-			
-
-			<div class="cols-12">
-				<h1>MIXING MADNESS</h1>
-			</div>
 
 
 
-<div class="cols-2">
-</div>
+  <head>
 
-			
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="generator.css">
+
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
 
 
+<div class="topper">
 
-					<div class="cols-1">
-					</div>
-				
+    <h1>AMALGAMATION OF COLOUR</h1>
 
-					<div class="cols-6">
-						<div class="info">
-						<p>Choose your desired two colours below and watch them be combined into a single colour. </p>
+	<p>Choose any colour and recieve the analogous, complemtary, split-complementary, triadic and tetradic schemes relating to the chosen colour.</p>
 					</div></div>
+    	<input id="hex-code" />
+   		<input id="picker" type="color" value="#121e64" />
+   		<div id="color"></div>
 
-				
-					<div class="cols-4">
-					</div> 
-
-
-			
-
-	<div class="cols-2">
-
-
-
-			<!-- <div class="form0"> <form id="form_0">
-			<select id="NAME" name="NAME">
-				<option value="default">COLOR</option>
-				<option value="red">RED</option>
-				<option value="orange">ORANGE</option>
-				<option value="yellow">YELLOW</option>
-				<option value="green">GREEN</option>
-				<option value="blue">BLUE</option>
-				<option value="violet">VIOLET</option></select>
-			</form>
-	</div> -->
 </div>
+      <br />
 
 
-
-	<div class="cols-1">
-
-
-			<div class="form1"> <form id="form_1">
-			<select id="COLOR" name="COLOR">
-				<option value="0">COLOR</option>
-				<option value="1">RED COMPLEMENTARY</option>
-				<option value="2">ORANGE COMPLEMENTARY</option>
-				<option value="3">YELLOW COMPLEMENTARY</option>
-				<option value="4">GREEN COMPLEMENTARY</option>
-				<option value="5">BLUE COMPLEMENTARY</option>
-				<option value="6">VIOLET COMPLEMENTARY</option>
-
-				<option value="7">RED ANALOGOUS</option>
-				<option value="8">ORANGE ANALOGOUS</option>
-				<option value="9">YELLOW ANALOGOUS</option>
-				<option value="10">GREEN ANALOGOUS</option>
-				<option value="11">BLUE ANALOGOUS</option>
-				<option value="12">VIOLET ANALOGOUS</option>
-
-				<option value="13">RED TRIADIC</option>
-				<option value="14">ORANGE TRIADIC</option>
-				<option value="15">YELLOW TRIADIC</option>
-				<option value="16">GREEN TRIADIC</option>
-				<option value="17">BLUE TRIADIC</option>
-				<option value="18">VIOLET TRIADIC</option>
-
-				<option value="19">RED TETRADIC</option>
-				<option value="20">ORANGE TETRADIC</option>
-				<option value="21">YELLOW TETRADIC</option>
-				<option value="22">GREEN TETRADIC</option>
-				<option value="23">BLUE TETRADIC</option>
-				<option value="24">VIOLET TETRADIC</option>
-
-				<!-- <option value="25">RED SPLIT COMPLEMENTARY</option>
-				<option value="26">ORANGE SPLIT COMPLEMENTARY</option>
-				<option value="27">YELLOW SPLIT COMPLEMENTARY</option>
-				<option value="28">GREEN SPLIT COMPLEMENTARY</option>
-				<option value="29">BLUE SPLIT COMPLEMENTARY</option>
-				<option value="30">VIOLET SPLIT COMPLEMENTARY</option> --></select>
+ <div class="output">
 
 
+ 									<!-- analogous colors are found next to each other on the color wheel monochromatic scheme describes a saturation, highlights and shadows of a single color -->
 
-		<!-- 		monochromatic? -->
-				
-	
+    <div id="Analogous">
+      ANALOGOUS<br />
+      	<div id="analogous1"></div><div id="analogous2"></div><div id="analogous3"></div>
+    </div>
 
-			</form>
-		</form>
-	</div>
+    <br />
+    <br />
+
+
+									<!-- complementary colors are opposite each other on the color wheel -->
+
+    <div id="Complementary">
+      COMPLEMENTARY<br />
+     	 <div id="complementary1"></div><div id="complementary2"></div>
+    </div>
+
+      <br />
+
+
+      								<!-- split-complementary colors is when a primary color (red, blue, yellow) is together with the compliment colors of its complementary i.e blue, red and yellow (red and yellow are compliments of orange, the complimentary of blue) -->
+
+    <div id="Split-Complementary">
+      SPLIT-COMPLEMENTARY<br />
+     	 <div id="split-complementary1"></div><div id="split-complementary2"></div><div id="split-complementary3"></div>
+    </div>
+
+      <br />
+      <br />
+
+
+      							   <!-- triadic colors are groups of three colors that are equal distances from each other on the color wheel -->
+
+    <div id="Triadic">
+      TRIADIC<br />
+     	 <div id="triadic1"></div><div id="triadic2"></div><div id="triadic3"></div>
+    </div>
+
+      <br />
+
+      								<!-- tetradic colors are two sets of complementary colors -->
+
+
+    <div id="Tetradic">
+      TETRADIC<br />
+      	<div id="tetradic1"></div><div id="tetradic2"></div><div id="tetradic3"></div><div id="tetradic4"></div>
+    </div>
+
 </div>
-</div>
-</div>
-</div>
+   
+   
 
-
-
-	<!-- <div class="cols-1">
-	</div>
-
-	<div class="cols-1">
-		<div class="form2"> <form id="form_2">
-			<select id="style" name="style">
-				<option value="0">STYLE</option>
-				<option value="1">REGULAR</option>
-				<option value="2">ITALIC</option>
-				<option value="3">BOLD</option>
-				<option value="4">LIGHT</option>
-				<option value="5">BLACK</option></select>
-			</form>
-		</div>
-	</div>
-
-	<div class="cols-1">
-	</div>
-
-
-<div class="cols-2">
-<div class="input_text" id="input_text">
-	<input id="inputText" type="inputText" placeholder="INPUT TEXT"> 
-</div>
-</div> -->
-
-<!-- 	<div class="cols-4">
-	</div>
-
-<div class="cols-4">
-</div>
-	<div class="cols-6">
-	
-	</div>
-
-	<div class="cols-2">
-	</div>
-
-
- -->
-
-
-
-</body>
+    		<script src="generator.js"></script>
 
 
 
 
+  </body>
 
 </html>
