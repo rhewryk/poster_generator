@@ -36,6 +36,23 @@ input[type=color] {
   margin-top: 10em;
 }
 
+
+/*.output:hover {
+  cursor: pointer;
+}*/
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#Analogous, #Complementary, #Split-Complementary, #Triadic, #Tetradic:hover {
+  cursor: pointer;
+}
+
+
+
+
 input {
   width: 230px;
   height: 40px;

@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#defaultCanvas0 {
+	transform: scale(.7);
+}
+
+
+
+
+
+	#container {
+		max-width: 1300px;
+/*		min-width: 375px;*/
+		max-height: 1100px;
+/*		min-height: 660px;*/
+		margin: 20px auto;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 21px;
+		/*padding-top: 10px;*/
+
+/*		temoprary for development*/
+
+		/*border-left: 1px solid black;
+		border-right: 1px solid black;
+		min-height: 200px;*/
+	}
+
+		.cols-2 { grid-column:span 2; }
+		.cols-3 { grid-column:span 3; }
+		.cols-4 { grid-column:span 4; }
+		.cols-6 { grid-column:span 6; }
+		.cols-8 { grid-column:span 8; }
+		.cols-12 { grid-column:span 12; }
