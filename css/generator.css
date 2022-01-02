@@ -13,11 +13,18 @@ h1 {
   font-size: 30px;
 }
 
-          .output {
-            text-align: center;
-            margin-top: 1em;
-            font-size: 15px;
-          }
+.output {
+ text-align: center;
+ margin-top: 1em;
+ font-size: 15px;
+ display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
 
 
 p{

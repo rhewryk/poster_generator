@@ -302,6 +302,31 @@ text(s, 20, 20, 900, 900);
 
 }
 
+$(".options").click(function(){
+  $(".output").toggleClass("hidden");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
