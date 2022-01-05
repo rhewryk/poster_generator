@@ -17,13 +17,13 @@ h1 {
  text-align: center;
  margin-top: 1em;
  font-size: 15px;
- display: block;
+ display: none;
 }
+
 
 .hidden {
   display: none;
 }
-
 
 
 
@@ -50,9 +50,7 @@ a{
   color: black;
 }
 
-#Analogous, #Complementary, #Split-Complementary, #Triadic, #Tetradic:hover {
-  cursor: pointer;
-}
+
 
 
 

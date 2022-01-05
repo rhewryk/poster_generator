@@ -1,223 +1,93 @@
 
+
 <!DOCTYPE html>
 
-
 <html>
-
-
-
-  <head>
-
-    <title>AMALGAMATION OF COLOURS</title>
-
-
-
-    <link rel="stylesheet" href="https://use.typekit.net/hcj2shw.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-
-
-    <link rel="stylesheet" type="text/css" href="css/generator.css">
-
-    <meta charset="utf-8" />
-
-  </head>
-  <body>
-
-
-<div class="topper">
-
-    <h1>AMALGAMATION OF COLOURS</h1>
-
-	<p>Choose any colour and recieve the analogous, complemtary, split-complementary, triadic and tetradic schemes relating to the chosen colour.</p>
-					</div></div>
-    	<input id="hex-code" />
-   		<input id="picker" type="color" value="#121e64" />
-   		<div id="colour"></div>
-
-</div>
-      <br />
-
-
- <div class="output">
-
-
- 									<!-- analogous colors are found next to each other on the color wheel monochromatic scheme describes a saturation, highlights and shadows of a single color -->
-
-    <div id="Analogous" class="options">
-      ANALOGOUS<br />
-      	<div id="analogous1"></div><div id="analogous2"></div><div id="analogous3"></div>
-    </div>
-  
-
-    <br />
-    <br />
-
-
-									<!-- complementary colors are opposite each other on the color wheel -->
-
-
-    <div id="Complementary" class="options">
-      COMPLEMENTARY<br />
-     	 <div id="complementary1"></div><div id="complementary2"></div>
-    </div>
-
-      <br />
-
-
-      								<!-- split-complementary colors is when a primary color (red, blue, yellow) is together with the compliment colors of its complementary i.e blue, red and yellow (red and yellow are compliments of orange, the complimentary of blue) -->
-
-    <div id="Split-Complementary" class="options">
-      SPLIT-COMPLEMENTARY<br />
-     	 <div id="split-complementary1"></div><div id="split-complementary2"></div><div id="split-complementary3"></div>
-    </div>
-
-      <br />
-      <br />
-
-
-      							   <!-- triadic colors are groups of three colors that are equal distances from each other on the color wheel -->
-
-    <div id="Triadic" class="options">
-      TRIADIC<br />
-     	 <div id="triadic1"></div><div id="triadic2"></div><div id="triadic3"></div>
-    </div>
-
-      <br />
-
-      								<!-- tetradic colors are two sets of complementary colors -->
-
-    <div id="Tetradic" class="options">
-      TETRADIC<br />
-      	<div id="tetradic1"></div><div id="tetradic2"></div><div id="tetradic3"></div><div id="tetradic4"></div>
-    </div>
-
-</div>
-
-<!-- the following is copied straight from index-poster.html -->
-
-<div id="container">
-<div class="top-menu">
-      <div class="cols-6">
+   <head>
+      <title>AMALGAMATION OF COLOURS</title>
+      <link rel="stylesheet" href="https://use.typekit.net/hcj2shw.css">
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/generator.css">
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <div class="topper">
+         <h1>AMALGAMATION OF COLOURS</h1>
+         <p>Choose any colour and recieve the analogous, complemtary, split-complementary, triadic and tetradic schemes relating to the chosen colour.</p>
       </div>
-      <div class="cols-4">
+      <input id="hex-code" />
+      <input id="picker" type="color" value="#121e64" />
+
+
+
+
+      <select id="color_relations" name="color_relations">
+
+        <option value="COMPLEMENTARY">COMPLEMENTARY</option>
+        <option value="SPLIT COMPLEMENTARY">SPLIT COMPLEMENTARY</option>
+        <option value="ANALOGOUS">ANALOGOUS</option>
+        <option value="TRIADIC">TRIADIC</option>
+        <option value="TETRADIC">TETRADIC</option>
+
+      </select>
+
+      <br />
+      <div class="output">
+         <!-- analogous colors are found next to each other on the color wheel monochromatic scheme describes a saturation, highlights and shadows of a single color -->
+         <div id="Analogous" class="options">
+            ANALOGOUS<br />
+            <div id="analogous1"></div>
+            <div id="analogous2"></div>
+            <div id="analogous3"></div>
+         </div>
+         <br />
+         <br />
+         <!-- complementary colors are opposite each other on the color wheel -->
+         <div id="Complementary" class="options">
+            COMPLEMENTARY<br />
+            <div id="complementary1"></div>
+            <div id="complementary2"></div>
+         </div>
+         <br />
+         <!-- split-complementary colors is when a primary color (red, blue, yellow) is together with the compliment colors of its complementary i.e blue, red and yellow (red and yellow are compliments of orange, the complimentary of blue) -->
+         <div id="Split-Complementary" class="options">
+            SPLIT-COMPLEMENTARY<br />
+            <div id="split-complementary1"></div>
+            <div id="split-complementary2"></div>
+            <div id="split-complementary3"></div>
+         </div>
+         <br />
+         <br />
+         <!-- triadic colors are groups of three colors that are equal distances from each other on the color wheel -->
+         <div id="Triadic" class="options">
+            TRIADIC<br />
+            <div id="triadic1"></div>
+            <div id="triadic2"></div>
+            <div id="triadic3"></div>
+         </div>
+         <br />
+         <!-- tetradic colors are two sets of complementary colors -->
+         <div id="Tetradic" class="options">
+            TETRADIC<br />
+            <div id="tetradic1"></div>
+            <div id="tetradic2"></div>
+            <div id="tetradic3"></div>
+            <div id="tetradic4"></div>
+         </div>
       </div>
-    </div>
-      
-      
+      <!-- the following is copied straight from index-poster.html -->
+      <div id="container">
+         <div class="top-menu">
+            <div class="cols-12">
+               <h1>COLOURS</h1>
+            </div>
 
-      <div class="cols-12">
-        <h1>COLOURS</h1>
+              
+
       </div>
-
-
-
-<div class="cols-2">
-</div>
-
-
-
-
-
-          <div class="cols-1">
-          </div>
-        
-
-          <div class="cols-6">
-            <div class="info">
-            <!-- <p>On this page, you have the ability to design a poster - all with one decision. This decision dictates the resulting composition.</p> -->
-          </div></div>
-
-          <div class="cols-1">
-          </div>
-
-<!-- <span class="gradient-text" data-gradient-text-range="(237,28,36), (0,166,81), (255,242,0), (127,63,152), (0,128,255), (242,101,34)"
-data-gradient-text-position="horizontal">cyanmagentayellowblackredgreenblue</span> -->
-          <div class="cols-2">
-          </div>
-          <div class="cols-2">
-          </div>
-          <!-- <div id="included_text">cyanmagentayellowblackredgreenblue</div> -->
-          <div class="cols-1">
-          </div>
-          <div class="cols-1">
-          </div>
-
-  <div class="cols-2">
-
-</div>
-
-
-
-  <div class="cols-2">
-
-
-      <div class="form1"> <form id="form_1">
-      <select id="COLOURS" name="COLOURS">
-        <option value="0">COLOR</option>
-        <option value="1">RED COMPLEMENTARY</option>
-        <option value="2">ORANGE COMPLEMENTARY</option>
-        <option value="3">YELLOW COMPLEMENTARY</option>
-        <option value="4">GREEN COMPLEMENTARY</option>
-        <option value="5">BLUE COMPLEMENTARY</option>
-        <option value="6">VIOLET COMPLEMENTARY</option>
-
-        <option value="7">RED ANALOGOUS</option>
-        <option value="8">ORANGE ANALOGOUS</option>
-        <option value="9">YELLOW ANALOGOUS</option>
-        <option value="10">GREEN ANALOGOUS</option>
-        <option value="11">BLUE ANALOGOUS</option>
-        <option value="12">VIOLET ANALOGOUS</option>
-
-        <option value="13">RED TRIADIC</option>
-        <option value="14">ORANGE TRIADIC</option>
-        <option value="15">YELLOW TRIADIC</option>
-        <option value="16">GREEN TRIADIC</option>
-        <option value="17">BLUE TRIADIC</option>
-        <option value="18">VIOLET TRIADIC</option>
-
-        <option value="19">RED TETRADIC</option>
-        <option value="20">ORANGE TETRADIC</option>
-        <option value="21">YELLOW TETRADIC</option>
-        <option value="22">GREEN TETRADIC</option>
-        <option value="23">BLUE TETRADIC</option>
-        <option value="24">VIOLET TETRADIC</option>
-
-        <!-- <option value="25">RED SPLIT COMPLEMENTARY</option>
-        <option value="26">ORANGE SPLIT COMPLEMENTARY</option>
-        <option value="27">YELLOW SPLIT COMPLEMENTARY</option>
-        <option value="28">GREEN SPLIT COMPLEMENTARY</option>
-        <option value="29">BLUE SPLIT COMPLEMENTARY</option>
-        <option value="30">VIOLET SPLIT COMPLEMENTARY</option> --></select>
-
-
-
-    <!--    monochromatic? -->
-        
-  
-
-      </form>
-    </form>
-  </div>
-</div>
-</div>
-</div>
-</div>
-
-
-   
-
-    		<script src="js/generator-color.js"></script>
-
-
-         <!-- <script src="js/generator-poster.js"></script> -->
-
-
-
-
-  </body>
-
+      </div>
+      <script src="js/generator-color.js"></script>
+   </body>
 </html>
+
