@@ -51,7 +51,26 @@ a{
 }
 
 
+#color_relations {
+  font-family: monospace;
+  outline-style: solid;
+  outline-color: grey;
+  outline-width: thin;
+  border: black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3px;
+}
 
+#picker {
+ outline-style: solid;
+  outline-color: grey;
+  outline-width: thin;
+  border: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px;
+}
 
 
 

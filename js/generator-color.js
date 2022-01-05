@@ -33,6 +33,8 @@ let square4;
 
 
 
+
+
 function setup() {
 
     //complementary colors
@@ -101,11 +103,8 @@ $("#color_relations").change(function(){
 })
 
 
-
 function update() {
     
-
-
     colorMode(HSB);
 
     baseColor = color($("#picker").val());
@@ -147,29 +146,92 @@ function update() {
     $("#tetradic4").css("background", triadic3);
 }
 
+function setGradient(x, y, w, h, baseColor, complementary, axis) {
+    noFill();
+
+    if (axis === X_AXIS) {
+        // left to right gradient
+        for (let i = x; i <= x + w; i++) {
+            let inter = map(i, x, x + w, 0, 1);
+            let z = lerpColor(baseColor, complementary, inter);
+            stroke(z);
+            line(i, y, i, y + h);
+        }
+    }
+}
+
 
 function makePoster() {
 
-
-
   cr = $("#color_relations").val()
-  alert(cr)
+  // alert(cr)
 
 
+//have to add lerpColor to the if statememt below. No sure how to integrate it with the additional function
+
+if ($("#color_relations").val() == "COMPLEMENTARY") {
 
   createCanvas(2400, 1500);
   createGraphics(width, height);
   setGradient(0, 0, width / 2, height, baseColor, complementary, X_AXIS);
-  noStroke();
+  noStroke()
   textAlign(LEFT);
-  fill(c2);
+  fill(baseColor);
   textSize(90);
   textLeading(100);
   text(s, 20, 20, 900, 900);
+}
+
+if ($("#color_relations").val() == "SPLIT COMPLEMENTARY") {
+  createCanvas(2400, 1500);
+  createGraphics(width, height);
+  setGradient(0, 0, width / 2, height, splitComplementary3, splitComplementary2, X_AXIS);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
+}
+
+if ($("#color_relations").val() == "ANALOGOUS") {
+  createCanvas(2400, 1500);
+  createGraphics(width, height);
+  setGradient(0, 0, width / 2, height, analogous1, analogous3, X_AXIS);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
+}
+
+if ($("#color_relations").val() == "TRIADIC") {
+  createCanvas(2400, 1500);
+  createGraphics(width, height);
+  setGradient(0, 0, width / 2, height, triadic2, triadic3, X_AXIS);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
+}
+
+if ($("#color_relations").val() == "TETRADIC") {
+  createCanvas(2400, 1500);
+  createGraphics(width, height);
+  setGradient(0, 0, width / 2, height, complementary, tetradic2, X_AXIS);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
+}
 
 
 }
-
 
 
 // function draw() {
@@ -253,21 +315,7 @@ function makePoster() {
 
 
 
-function setGradient(x, y, w, h, c1, c2, axis) {
-    noFill();
 
-    if (axis === X_AXIS) {
-        // left to right gradient
-        for (let i = x; i <= x + w; i++) {
-            let inter = map(i, x, x + w, 0, 1);
-            let c = lerpColor(c1, c2, inter);
-            stroke(c);
-            line(i, y, i, y + h);
-        }
-
-}
-
-}
 
 $(".options").click(function() {
   $(".output").toggleClass("hidden");
