@@ -164,7 +164,7 @@ function setGradient(x, y, w, h, baseColor, complementary, axis) {
 function makePoster() {
 
   cr = $("#color_relations").val()
-  // alert(cr)
+
 
 
 //have to add lerpColor to the if statememt below. No sure how to integrate it with the additional function
