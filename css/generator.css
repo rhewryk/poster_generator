@@ -25,6 +25,11 @@ h1 {
   display: none;
 }
 
+#defaultCanvas0 {
+  object-position: center;
+  position: relative;
+transform: translateX(12.5%);
+}
 
 
 p{
@@ -42,7 +47,6 @@ input[type=color] {
   vertical-align: left;
   margin-top: 10em;
 }
-
 
 
 a{

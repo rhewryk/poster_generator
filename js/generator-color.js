@@ -31,10 +31,6 @@ let tetradic2;
 let square2;
 let square4;
 
-
-
-
-
 function setup() {
 
     //complementary colors
@@ -89,7 +85,6 @@ function setup() {
     update();
     makePoster();
 }
-
 
 $("#picker").change(function(){
   update();
@@ -173,8 +168,8 @@ if ($("#color_relations").val() == "COMPLEMENTARY") {
 
   createCanvas(2400, 1500);
   createGraphics(width, height);
-  setGradient(0, 0, width / 2, height, baseColor, complementary, X_AXIS);
-  noStroke()
+  setGradient(0, 0, width / 2, height, a2, a3, X_AXIS);
+  noStroke();
   textAlign(LEFT);
   fill(baseColor);
   textSize(90);
@@ -229,92 +224,7 @@ if ($("#color_relations").val() == "TETRADIC") {
   textLeading(100);
   text(s, 20, 20, 900, 900);
 }
-
-
 }
-
-
-// function draw() {
-//     if (!valueFocused) {
-//         value.value(picker.value());
-//         update();
-
-//     }
-
-
-//     $("#COLOURS").change(function() {
-
-
-//         //COMPLEMENTARY COLOR COMBOS
-
-//         if ($(this).val() == "1") {
-//             setGradient(0, 0, width / 2, height, c1, c2, X_AXIS);
-//         }
-//         if ($(this).val() == "2") {
-//             setGradient(0, 0, width / 2, height, c6, c5, X_AXIS);
-//         }
-//         if ($(this).val() == "3") {
-//             setGradient(0, 0, width / 2, height, c3, c4, X_AXIS);
-//         }
-//         if ($(this).val() == "4") {
-//             setGradient(0, 0, width / 2, height, c2, c1, X_AXIS);
-//         }
-//         if ($(this).val() == "5") {
-//             setGradient(0, 0, width / 2, height, c5, c6, X_AXIS);
-//         }
-//         if ($(this).val() == "6") {
-//             setGradient(0, 0, width / 2, height, c4, c3, X_AXIS);
-//         }
-
-
-//         //ANALOGOUS COLOR COMBOS
-
-//         if ($(this).val() == "7") {
-//             setGradient(0, 0, width / 2, height, a1, a2, X_AXIS);
-//         }
-//         if ($(this).val() == "8") {
-//             setGradient(0, 0, width / 2, height, a2, a3, X_AXIS);
-//         }
-//         if ($(this).val() == "9") {
-//             setGradient(0, 0, width / 2, height, a3, a4, X_AXIS);
-//         }
-//         if ($(this).val() == "10") {
-//             setGradient(0, 0, width / 2, height, a4, a5, X_AXIS);
-//         }
-//         if ($(this).val() == "11") {
-//             setGradient(0, 0, width / 2, height, a5, a6, X_AXIS);
-//         }
-//         if ($(this).val() == "12") {
-//             setGradient(0, 0, width / 2, height, a6, a1, X_AXIS);
-//         }
-
-
-//         //TRIADIC COLOR COMBOS
-
-//         if ($(this).val() == "13") {
-//             setGradient(0, 0, width / 2, height, t6, t4, X_AXIS);
-//         }
-//         if ($(this).val() == "14") {
-//             setGradient(0, 0, width / 2, height, t2, t1, X_AXIS);
-//         }
-//         if ($(this).val() == "15") {
-//             setGradient(0, 0, width / 2, height, t4, t5, X_AXIS);
-//         }
-//         if ($(this).val() == "16") {
-//             setGradient(0, 0, width / 2, height, t1, t3, X_AXIS);
-//         }
-//         if ($(this).val() == "17") {
-//             setGradient(0, 0, width / 2, height, t5, t6, X_AXIS);
-//         }
-//         if ($(this).val() == "18") {
-//             setGradient(0, 0, width / 2, height, t3, t2, X_AXIS);
-//         }
-
-//     })
-// }
-
-
-
 
 
 $(".options").click(function() {
