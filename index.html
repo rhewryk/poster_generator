@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html>
@@ -16,6 +14,7 @@
          <h1>AMALGAMATION OF COLOURS</h1>
          <p>Choose any colour and recieve the analogous, complemtary, split-complementary, triadic and tetradic schemes relating to the chosen colour.</p>
       </div>
+<!--       <input id="hex-code" /> -->
       <input id="picker" type="color" value="#121e64" />
 
       <select id="color_relations" name="color_relations">
@@ -25,60 +24,52 @@
         <option value="ANALOGOUS">ANALOGOUS</option>
         <option value="TRIADIC">TRIADIC</option>
         <option value="TETRADIC">TETRADIC</option>
-
       </select>
-
       <br />
-      <div class="output">
-         <div id="Analogous" class="options">
+      <div class="output"> <!-- analogous colors are found next to each other on the color wheel monochromatic scheme describes a saturation, highlights and shadows of a single color -->
+         <div id="Analogous" class="options" date-value="ANALOGOUS">
             <h4>ANALOGOUS</h4>
-            <br />
             <div class="color_relations__option" id="analogous1"></div>
             <div class="color_relations__option" id="analogous2"></div>
             <div class="color_relations__option" id="analogous3"></div>
          </div>
          <br />
-         <br />
-         <div id="Complementary" class="options">
+         <br /> <!-- complementary colors are opposite each other on the color wheel -->
+         <div id="Complementary" class="options" data-value="COMPLEMENTARY">
             <h4>COMPLEMENTARY</h4>
-            <br />
-            <div class="color_relations__option" div="complementary1"></div>
-            <div class="color_relations__option" div="complementary2"></div>
+            <div class="color_relations__option" id="complementary1"></div>
+            <div class="color_relations__option" id="complementary2"></div>
          </div>
-         <br />
-         <div id="Split-Complementary" class="options">
+         <br /> <!-- split-complementary colors is when a primary color (red, blue, yellow) is together with the compliment colors of its complementary i.e blue, red and yellow (red and yellow are compliments of orange, the complimentary of blue) -->
+         <div id="Split-Complementary" class="options" data-value="SPLIT COMPLEMENTARY">
             <h4>SPLIT-COMPLEMENTARY</h4>
-            <br />
-            <div class="color_relations__option" div="split-complementary1"></div>
-            <div class="color_relations__option" div="split-complementary2"></div>
-            <div class="color_relations__option" div="split-complementary3"></div>
+            <div class="color_relations__option" id="split-complementary1"></div>
+            <div class="color_relations__option" id="split-complementary2"></div>
+            <div class="color_relations__option" id="split-complementary3"></div>
          </div>
          <br />
-         <br />
-         <div id="Triadic" class="options">
+         <br /> <!-- triadic colors are groups of three colors that are equal distances from each other on the color wheel -->
+         <div id="Triadic" class="options" data-value="TRIADIC">
             <h4>TRIADIC</h4>
-            <br />
-            <div class="color_relations__option" div="triadic1"></div>
-            <div class="color_relations__option" div="triadic2"></div>
-            <div class="color_relations__option" div="triadic3"></div>
+            <div class="color_relations__option" id="triadic1"></div>
+            <div class="color_relations__option" id="triadic2"></div>
+            <div class="color_relations__option" id="triadic3"></div>
          </div>
-         <br />
-         <div id="Tetradic" class="options">
+         <br /> <!-- tetradic colors are two sets of complementary colors -->
+         <div id="Tetradic" class="options" data-value="TETRADIC">
             <h4>TETRADIC</h4>
-            <br />
-            <div class="color_relations__option" div="tetradic1"></div>
-            <div class="color_relations__option" div="tetradic2"></div>
-            <div class="color_relations__option" div="tetradic3"></div>
-            <div class="color_relations__option" div="tetradic4"></div>
+            <div class="color_relations__option" id="tetradic1"></div>
+            <div class="color_relations__option" id="tetradic2"></div>
+            <div class="color_relations__option" id="tetradic3"></div>
+            <div class="color_relations__option" id="tetradic4"></div>
          </div>
-      </div>
-
-
+      </div> <!-- the following is copied straight from index-poster.html -->
       <div id="container">
          <div class="top-menu">
             <div class="cols-12">
-              <br />
-              <br />
+               <br />
+               <br />
+               <br />
                <h1>POSTER</h1>
             </div>
       </div>
@@ -86,4 +77,3 @@
       <script src="js/generator-color.js"></script>
    </body>
 </html>
-
