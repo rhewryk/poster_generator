@@ -164,55 +164,49 @@ function makePoster() {
 
   createCanvas(1200, 1800);
   createGraphics(width, height);
+  textSize(100);
+  textLeading(120);
 
-if ($("#color_relations").val() == "COMPLEMENTARY") {
+if (cr== "COMPLEMENTARY") {
   colorMode(RGB);
   setGradient(0, 0, width, height, baseColor, complementary);
   noStroke()
   textAlign(LEFT);
-  fill(colorMode);
-  textSize(90);
-  textLeading(100);
+  fill(baseColor);
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "SPLIT COMPLEMENTARY") {
+if (cr== "SPLIT COMPLEMENTARY") {
   setGradient(0, 0, width, height, splitComplementary3, splitComplementary2);
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "ANALOGOUS") {
-  setGradient(0, 0, width, height, analogous1, analogous3);
+if (cr== "ANALOGOUS") {
+  colorMode(RGB);
+  setGradient(0, 0, width, height, analogous1, baseColor);
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "TRIADIC") {
+if (cr== "TRIADIC") {
+  colorMode(RGB);
   setGradient(0, 0, width, height, triadic2, triadic3);
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "TETRADIC") {
+if (cr== "TETRADIC") {
   setGradient(0, 0, width, height, complementary, tetradic2);
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
 
