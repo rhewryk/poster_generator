@@ -184,9 +184,11 @@ if (cr== "SPLIT COMPLEMENTARY") {
   textAlign(LEFT);
   fill(baseColor);
   text(s, 50, 50, 50, 800);
+  text(s, 400, 655, 90, 3700);
   textSize(170);
   fill(splitComplementary2);
   text(s, 100, 55, 830, 500);
+  text(s, 300, 505, 50, 3600);
   textSize(200);
   fill(splitComplementary3);
   text(s, 50, 70, 900, 800);
