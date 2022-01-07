@@ -95,6 +95,47 @@ input {
 
                   }
 
+
+
+
+
+/*
+                  #analogous, #complementary, #split-complementary, #triadic, #tetradic, #square {
+                    text-align: center;
+                    display: inline-block;
+                    margin: 3px 0;
+                    width: 250px;
+                    padding: 20px;
+                    border-radius: 2px;
+                  }
+
+
+                  #analogous1, #analogous2, #analogous3, #split-complementary1, #split-complementary2, #split-complementary3, #triadic1, #triadic2, #triadic3 {
+                    display: inline-block;
+                    width: 100px;
+                    height: 90px;
+                  }
+
+                  #complementary1, #complementary2 {
+                    display: inline-block;
+                    width: 150px;
+                    height: 90px;
+                  }
+
+                  #tetradic1, #tetradic2, #tetradic3, #tetradic4, #square1, #square2, #square3, #square4 {
+                    display: inline-block;
+                    width: 75px;
+                    height: 90px;
+                  }
+
+                  #analogous1, #complementary1, #split-complementary1, #triadic1, #tetradic1, #square1 {
+                    border-radius: 2px 0 0 2px;
+                  }
+
+                  #analogous3, #complementary2, #split-complementary3, #triadic3, #tetradic4, #square4 {
+                    border-radius: 0 2px 2px 0;
+                  }
+*/
 canvas {
   display: block;
 }
