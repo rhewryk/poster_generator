@@ -173,8 +173,10 @@ if (cr== "COMPLEMENTARY") {
   noStroke()
   textAlign(LEFT);
   fill(complementary);
+  textSize(200);
   text(s, 15, 20, 900, 900);
   fill(baseColor);
+  textSize(300);
   text(s, 50, 145, 910, 800);
 }
 
@@ -200,7 +202,11 @@ if (cr== "ANALOGOUS") {
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
-  text(s, 20, 20, 900, 900);
+  text(s, 50, 20, 900, 900);
+  text(s, 800, 300, 10, 3900);
+  fill(analogous1)
+  text(s, 25, 105, 1500, 1000);
+  text(s, 100, 450, 100, 2800);
 }
 
 if (cr== "TRIADIC") {
@@ -209,15 +215,41 @@ if (cr== "TRIADIC") {
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
+  textSize(100);
   text(s, 20, 20, 900, 900);
+  text(s, 100, 100, 1600, 1800);
+  text(s, 600, 550, 1400, 2000);
+  text(s, 10, 800, 900, 2500);
+  text(s, 500, 1000, 900, 2500);
+  fill(triadic2);
+  textSize(500);
+  textLeading(260);
+  text(s, 10, 300, 900, 800);
+  fill(triadic3);
+  textSize(300);
+  text(s, -170, -100, 1000, 2000);
+
 }
 
 if (cr== "TETRADIC") {
+  colorMode(RGB);
   setGradient(0, 0, width, height, complementary, tetradic2);
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
   text(s, 20, 20, 900, 900);
+  fill(complementary)
+  textSize(200);
+  text(s, 80, 200, 1700, 1200);
+  fill(tetradic2);
+  textSize(500);
+  text(s, 200, 350, 4200, 2000);
+  fill(triadic3);
+  textSize(400);
+  textLeading(200);
+  text(s, 400, 400, 2000, 500);
+  text(s, 0, 0, 1900, 2200);
+
 }
 
 
