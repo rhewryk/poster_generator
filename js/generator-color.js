@@ -10,7 +10,7 @@ let p1, p2, p3;
 let c1, c2, c3, c4, c5, c6;
 let a1, a2, a3, a4, a5, a6;
 let c;
-let s = 'cyan magenta yellow black red green blue analogous complementary split-complementary triadic tetradic cyan magenta yellow black red green blue analogous complementary split-complementary triadic tetradic cyan magenta yellow black red green blue analogous complementary split-complementary triadic tetradic cyan magenta yellow black red green blue analogous complementary split-complementary triadic tetradiccyan magenta yellow black red green blue analogous complementary split-complementary triadic tetradic';
+let s = 'cyan magenta yellow black red green blue analogous complementary split-complementary triadic tetradic';
 let textspecifications = 475
 let t = 0.1
 let loopDuration = 2 * 60
@@ -30,6 +30,9 @@ let triadic3;
 let tetradic2;
 let square2;
 let square4;
+
+
+
 
 
 function setup() {
@@ -87,18 +90,21 @@ function setup() {
     makePoster();
 }
 
+
 $("#picker").change(function(){
   update();
   makePoster();
 })
 
-  $(".options").click(function(){
-    update();
-    makePoster($(this).data("value"));
-  })
+
+$("#color_relations").change(function(){
+  update();
+  makePoster();
+})
 
 
 function update() {
+    
     colorMode(HSB);
 
     baseColor = color($("#picker").val());
@@ -117,6 +123,7 @@ function update() {
 
     square2 = color((hue(baseColor) + 90) % 360, saturation(baseColor), brightness(baseColor));
     square4 = color((hue(baseColor) + 270) % 360, saturation(baseColor), brightness(baseColor));
+
 
 
     $("#analogous1").css("background", analogous1);
@@ -150,55 +157,76 @@ function setGradient(x, y, w, h, baseColor, complementary) {
         }
     }
 
-function makePoster(cr) {
 
-  createCanvas(1000, 1500);
+function makePoster() {
+
+  cr = $("#color_relations").val()
+
+  createCanvas(1200, 1800);
   createGraphics(width, height);
-  textSize(105);
-  textLeading(120);
-  textAlign(LEFT);
-  noStroke();
-  colorMode(RGB);
- 
 
-if (cr== "COMPLEMENTARY") {
+if ($("#color_relations").val() == "COMPLEMENTARY") {
   colorMode(RGB);
   setGradient(0, 0, width, height, baseColor, complementary);
+  noStroke()
+  textAlign(LEFT);
   fill(colorMode);
+  textSize(90);
+  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
 
-if (cr== "SPLIT COMPLEMENTARY") {
+if ($("#color_relations").val() == "SPLIT COMPLEMENTARY") {
   setGradient(0, 0, width, height, splitComplementary3, splitComplementary2);
-  fill(baseColor);
-  text(s, 20, 20, 900, 900);
-}
-
-if (cr== "ANALOGOUS") {
-  colorMode(RGB);
-  setGradient(0, 0, width, height, baseColor, analogous1);
-  text(s, 20, 20, 900, 900);
-  fill(baseColor);
-
-}
-
-if (cr== "TRIADIC") {
-  setGradient(0, 0, width, height, baseColor, triadic3);
-  fill(triadic2);
-  text(s, 20, 20, 900, 900);
   noStroke();
-}
-
-if (cr= "TETRADIC") {
-  setGradient(0, 0, width, height, complementary, tetradic2);
+  textAlign(LEFT);
   fill(baseColor);
+  textSize(90);
+  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
+
+if ($("#color_relations").val() == "ANALOGOUS") {
+  setGradient(0, 0, width, height, analogous1, analogous3);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
 }
+
+if ($("#color_relations").val() == "TRIADIC") {
+  setGradient(0, 0, width, height, triadic2, triadic3);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
+}
+
+if ($("#color_relations").val() == "TETRADIC") {
+  setGradient(0, 0, width, height, complementary, tetradic2);
+  noStroke();
+  textAlign(LEFT);
+  fill(baseColor);
+  textSize(90);
+  textLeading(100);
+  text(s, 20, 20, 900, 900);
+}
+
+
+}
+
+
+
+
 
 $(".options").click(function() {
   $(".output").toggleClass("hidden");
 });
+
 
 
 // http://printingcode.runemadsen.com/examples/color/hsv_primary/index.html

@@ -1,8 +1,8 @@
 html, body {
   font-family: monospace;
-  text-align: left;
-  text-decoration: none;
+  text-align: center;
 }
+
           .topper {
             text-align: center;
           }
@@ -10,25 +10,26 @@ html, body {
 h1 {
   text-align: center;
   letter-spacing: 5px;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .output {
- text-align: middle;
+ text-align: center;
  margin-top: 1em;
+ font-size: 15px;
+/* display: none;*/
 }
 
-#defaultCanvas0 {
-  display: block;
-  margin: auto;
-  transform-origin: 50% 0;
-  transform: scale(0.5);
-  text-decoration: none;
-}
+
+/*.hidden {
+  display: none;
+}*/
+
+
 
 p{
   font-family: monospace;
-  text-align: left;
+  text-align: center;
   font-size: 14px;
   max-width: 470px;
   min-width: 280px;
@@ -42,10 +43,13 @@ input[type=color] {
   margin-top: 10em;
 }
 
+
+
 a{
   text-decoration: none;
   color: black;
 }
+
 
 #color_relations {
   font-family: monospace;
@@ -68,6 +72,14 @@ a{
   padding: 4px;
 }
 
+#defaultCanvas0 {
+  display: block;
+  margin: auto;
+  transform-origin: 50% 0;
+  transform: scale(0.5);
+}
+
+
 input {
   width: 230px;
   height: 40px;
@@ -80,22 +92,42 @@ input {
                     width: 100%;
                     height: 200px;
                     border-radius: 5px;
-                    margin-bottom: 4em;
+                  margin-bottom: 4em;
                   }
 
-                  .options {
-                    display: contents;
-                    padding: .9em;
+                  #analogous, #complementary, #split-complementary, #triadic, #tetradic, #square {
+                    text-align: center;
+                    display: inline-block;
+                    border-radius: 2px;
                   }
 
-                  .color_relations__option {
-                    margin: left;
+
+                  #analogous1, #analogous2, #analogous3, #split-complementary1, #split-complementary2, #split-complementary3, #triadic1, #triadic2, #triadic3 {
+                    display: inline-block;
                     width: 32px;
                     height: 32px;
-                    padding: 1.4em;
+                  }
+
+                  #complementary1, #complementary2 {
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                  }
+
+                  #tetradic1, #tetradic2, #tetradic3, #tetradic4, #square1, #square2, #square3, #square4 {
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                  }
+
+                  #analogous1, #complementary1, #split-complementary1, #triadic1, #tetradic1, #square1 {
+                    border-radius: 2px 0 0 2px;
+                  }
+
+                  #analogous3, #complementary2, #split-complementary3, #triadic3, #tetradic4, #square4 {
+                    border-radius: 0 2px 2px 0;
                   }
 
 canvas {
   display: block;
-}
-, 
+} 
