@@ -74,9 +74,10 @@ a{
 
 #defaultCanvas0 {
   display: block;
-  margin: auto;
+  margin: left;
   transform-origin: 50% 0;
   transform: scale(0.5);
+  margin: auto;
 }
 
 
