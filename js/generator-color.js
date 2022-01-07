@@ -99,7 +99,6 @@ $("#color_relations").change(function(){
 
 
 function update() {
-    
     colorMode(HSB);
 
     baseColor = color($("#picker").val());
@@ -118,7 +117,6 @@ function update() {
 
     square2 = color((hue(baseColor) + 90) % 360, saturation(baseColor), brightness(baseColor));
     square4 = color((hue(baseColor) + 270) % 360, saturation(baseColor), brightness(baseColor));
-
 
 
     $("#analogous1").css("background", analogous1);
@@ -141,11 +139,9 @@ function update() {
     $("#tetradic4").css("background", triadic3);
 }
 
-function setGradient(x, y, w, h, baseColor, complementary, axis) {
+function setGradient(x, y, w, h, baseColor, complementary) {
     noFill();
 
-    if (axis === X_AXIS) {
-        // left to right gradient
         for (let i = x; i <= x + w; i++) {
             let inter = map(i, x, x + w, 0, 1);
             let z = lerpColor(baseColor, complementary, inter);
@@ -153,75 +149,60 @@ function setGradient(x, y, w, h, baseColor, complementary, axis) {
             line(i, y, i, y + h);
         }
     }
-}
 
 
 function makePoster() {
 
   cr = $("#color_relations").val()
 
-
-
-//have to add lerpColor to the if statememt below. No sure how to integrate it with the additional function
-
-if ($("#color_relations").val() == "COMPLEMENTARY") {
-
-  createCanvas(2400, 1500);
+  createCanvas(1200, 1800);
   createGraphics(width, height);
-  setGradient(0, 0, width / 2, height, a2, a3, X_AXIS);
-  noStroke();
+
+
+colorMode(RGB);
+  setGradient(0, 0, width, height, baseColor, complementary);
+// noStroke();
+// fill(baseColor);
+
+if (cr== "COMPLEMENTARY") {
   textAlign(LEFT);
-  fill(baseColor);
   textSize(90);
   textLeading(100);
+  colorMode(RGB);
+  setGradient(0, 0, width, height, baseColor, complementary);
+  noStroke();
+  fill("#picker");
+  // colorMode(RGB);
+  // setGradient(0, 0, width, height, complementary, baseColor);
+  // fill(white);
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "SPLIT COMPLEMENTARY") {
-  createCanvas(2400, 1500);
-  createGraphics(width, height);
-  setGradient(0, 0, width / 2, height, splitComplementary3, splitComplementary2, X_AXIS);
-  noStroke();
-  textAlign(LEFT);
+if (cr== "SPLIT COMPLEMENTARY") {
+  setGradient(0, 0, width, height, splitComplementary3, splitComplementary2);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
+  noStroke();
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "ANALOGOUS") {
-  createCanvas(2400, 1500);
-  createGraphics(width, height);
-  setGradient(0, 0, width / 2, height, analogous1, analogous3, X_AXIS);
-  noStroke();
-  textAlign(LEFT);
+if (cr= "ANALOGOUS") {
+  setGradient(0, 0, width, height, analogous1, analogous3);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
+  noStroke();
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "TRIADIC") {
-  createCanvas(2400, 1500);
-  createGraphics(width, height);
-  setGradient(0, 0, width / 2, height, triadic2, triadic3, X_AXIS);
+if (cr= "TRIADIC") {
+  setGradient(0, 0, width, height, triadic3, baseColor);
+  fill(triadic2);
   noStroke();
-  textAlign(LEFT);
-  fill(baseColor);
-  textSize(90);
-  textLeading(100);
   text(s, 20, 20, 900, 900);
 }
 
-if ($("#color_relations").val() == "TETRADIC") {
-  createCanvas(2400, 1500);
-  createGraphics(width, height);
-  setGradient(0, 0, width / 2, height, complementary, tetradic2, X_AXIS);
-  noStroke();
-  textAlign(LEFT);
+if (cr= "TETRADIC") {
+  setGradient(0, 0, width, height, complementary, tetradic2);
   fill(baseColor);
-  textSize(90);
-  textLeading(100);
+  noStroke();
   text(s, 20, 20, 900, 900);
 }
 }
