@@ -164,7 +164,7 @@ function makePoster() {
 
   createCanvas(1200, 1800);
   createGraphics(width, height);
-  textSize(100);
+  textSize(130);
   textLeading(120);
 
 if (cr== "COMPLEMENTARY") {
@@ -172,8 +172,10 @@ if (cr== "COMPLEMENTARY") {
   setGradient(0, 0, width, height, baseColor, complementary);
   noStroke()
   textAlign(LEFT);
+  fill(complementary);
+  text(s, 15, 20, 900, 900);
   fill(baseColor);
-  text(s, 20, 20, 900, 900);
+  text(s, 50, 145, 910, 800);
 }
 
 if (cr== "SPLIT COMPLEMENTARY") {
@@ -181,7 +183,12 @@ if (cr== "SPLIT COMPLEMENTARY") {
   noStroke();
   textAlign(LEFT);
   fill(baseColor);
-  text(s, 20, 20, 900, 900);
+  text(s, 20, 20, 900, 800);
+  fill(splitComplementary2);
+  text(s, 40, 15, 830, 500);
+  textSize(200);
+  fill(splitComplementary3);
+  text(s, 50, 70, 900, 800);
 }
 
 if (cr== "ANALOGOUS") {
